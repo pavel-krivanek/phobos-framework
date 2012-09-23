@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "ProtoObject",
+	"super" : "PhobosComponent",
 	"category" : "Phobos-Demo",
 	"classinstvars" : [ ],
 	"pools" : [ ],

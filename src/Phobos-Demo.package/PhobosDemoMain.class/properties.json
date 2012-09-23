@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "PhobosDemoCheckboxes",
+	"instvars" : [
+		"child"
+	],
+	"name" : "PhobosDemoMain",
 	"type" : "normal"
 }
