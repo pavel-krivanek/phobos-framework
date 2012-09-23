@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "ProtoObject",
+	"category" : "Phobos-Demo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"drawImage1",
+		"drawImage2",
+		"drawImage3",
+		"boxStyle"
+	],
+	"name" : "PhobosDemoMenubars",
+	"type" : "normal"
+}

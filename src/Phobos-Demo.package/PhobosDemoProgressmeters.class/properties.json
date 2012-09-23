@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ProtoObject",
+	"category" : "Phobos-Demo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PhobosDemoProgressmeters",
+	"type" : "normal"
+}

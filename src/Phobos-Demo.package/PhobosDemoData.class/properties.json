@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Phobos-Demo-Support",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"color",
+		"desc",
+		"name",
+		"sex"
+	],
+	"name" : "PhobosDemoData",
+	"type" : "normal"
+}
