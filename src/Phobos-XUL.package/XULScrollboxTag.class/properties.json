@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "XULTag",
+	"category" : "Phobos-XUL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XULScrollboxTag",
+	"type" : "normal"
+}

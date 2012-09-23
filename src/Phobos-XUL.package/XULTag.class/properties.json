@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Phobos-XUL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"attributes",
+		"canvas",
+		"children",
+		"parent",
+		"id"
+	],
+	"name" : "XULTag",
+	"type" : "normal"
+}
