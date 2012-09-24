@@ -11,7 +11,7 @@ setAttribute: anAttributeName to: aValue
 	msg target: id.
 	msg content: anAttributeName asString.
 	msg argument: aValue.
-	PhobosCurrentSession value webSocket sendMessage: (Json render: msg ).	
+	self canvas component session webSocket sendMessage: (Json render: msg ).	
 	
 
 	
