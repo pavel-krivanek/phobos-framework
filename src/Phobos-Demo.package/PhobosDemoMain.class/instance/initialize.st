@@ -3,4 +3,4 @@ initialize
 
 	super initialize.
 	
-	child := self pages first value new.	
+	child := self pages first value on: self window.	
