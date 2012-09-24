@@ -1,7 +1,7 @@
 as yet unclassified
 renderContentOn: xml
 
-	| listId srcSectionId ajax |
+	| list srcSectionId ajax |
 "	
 	listId := WAExternalID new.
 	srcSectionId := WAExternalID new.
@@ -21,13 +21,19 @@ renderContentOn: xml
 	"		
 
 	xml hbox flex: 1; with: [
-		xml listbox
-			id: listId; 
+		list := xml listbox
 			style:'width:10em'; 
-			onselect: (ajax);
+			onselect: [
+				| newComponent selectedIndex |
+				selectedIndex := list get: #selectedIndex.
+				newComponent := (self pages at: selectedIndex + 1) value on: self window.
+				newComponent replace: child.
+				child := newComponent.
+				];
 			with: [
 				self pages do: [:pageAssoc |
-					xml listitem label: pageAssoc key]].
+					xml listitem label: pageAssoc key]];
+			yourself.
 		
 		xml splitter collapse: #before; resizebefore: #closest; resizeafter: #grow; with: [
 			xml grippy ].
@@ -37,7 +43,7 @@ renderContentOn: xml
 				xml tab label: 'Examples'.
 				xml tab label: 'Source'.].
 			xml tabpanels flex: 1; with: [
-				xml tabpanel with: [ xml render: child ].
+				xml tabpanel with: [ xml vbox flex: 1; style: 'overflow: auto'; with: [xml render: child] ].
 				xml tabpanel with: [ 
 					"xml section: srcSectionId with: [
 						self renderSourceOn: xml ] "].
@@ -45,4 +51,4 @@ renderContentOn: xml
 	].
 
 	self renderStatusBarOn: xml.
-			
+		
