@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Phobos-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"id",
+		"mainWindowComponent",
+		"webSocket",
+		"application",
+		"closures",
+		"windows"
+	],
+	"name" : "PhobosSession",
+	"type" : "normal"
+}

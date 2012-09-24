@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Phobos-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"namespace",
+		"prefix",
+		"tagName",
+		"attributes",
+		"text",
+		"children"
+	],
+	"name" : "PhobosTransportElement",
+	"type" : "normal"
+}

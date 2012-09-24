@@ -1,0 +1,4 @@
+accessing
+currentTag
+	
+	^ currentTag

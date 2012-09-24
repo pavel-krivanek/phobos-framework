@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PhobosApplication",
+	"category" : "Phobos-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PhobosAppHelloWorld",
+	"type" : "normal"
+}

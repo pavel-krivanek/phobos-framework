@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Phobos-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"component",
+		"currentTag",
+		"nodes",
+		"parentTag"
+	],
+	"name" : "PhobosAbstractCanvas",
+	"type" : "normal"
+}

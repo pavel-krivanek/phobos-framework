@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Phobos-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"content",
+		"sessionId",
+		"target",
+		"type",
+		"window",
+		"argument"
+	],
+	"name" : "PhobosMessage",
+	"type" : "normal"
+}
