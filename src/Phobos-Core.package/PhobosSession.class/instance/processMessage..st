@@ -12,7 +12,7 @@ processMessage: message
 		xul := (self getMain: #mainWindow) rendered.
 		newMessage := PhobosMessage new.
 		newMessage type: #replaceComponentInDocument.
-		newMessage window: nil.
+		newMessage window: #mainWindow.
 		newMessage target: #mainWindowComponent.
 		newMessage content: (Json render: xul).
 		self webSocket sendMessage: (Json render: newMessage ).

@@ -1,4 +1,4 @@
 as yet unclassified
 on: aWindow
 
-	^ self new window: aWindow.
+	^ self basicNew window: aWindow; initialize.
