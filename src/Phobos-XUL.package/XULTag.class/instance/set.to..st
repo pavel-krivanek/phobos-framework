@@ -7,11 +7,11 @@ set: aPropertyName to: aValue
 	
 	msg := PhobosMessage new.
 	msg type: #setProperty.
-	msg window: nil.
+	msg window: self canvas component window.
 	msg target: id.
 	msg content: aPropertyName asString.
 	msg argument: aValue.
-	PhobosCurrentSession value webSocket sendMessage: (Json render: msg ).	
+	self canvas component session webSocket sendMessage: (Json render: msg ).	
 	
 
 	

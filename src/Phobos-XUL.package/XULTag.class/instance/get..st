@@ -10,7 +10,7 @@ get: aPropertyName
 		cid := PhobosCurrentSession value registerClosure: [:res | cc value: res].
 		newMessage := PhobosMessage new.
 		newMessage type: #getProperty.
-		newMessage window: nil.
+		newMessage window: self canvas component window.
 		newMessage target: id.
 		newMessage content: aPropertyName asString.
 		newMessage argument: cid.
