@@ -5,7 +5,7 @@ renderContentOn: xul
 	
 	xul vbox flex: 1; style: 'overflow: auto'; with: [
 
-		"xul description with: [xul heading: 'XUL Progressmeters'.]."
+		xul description with: [xul heading: 'XUL Progressmeters'.].
 			
 		xul hbox with: [
 			xul groupbox with: [

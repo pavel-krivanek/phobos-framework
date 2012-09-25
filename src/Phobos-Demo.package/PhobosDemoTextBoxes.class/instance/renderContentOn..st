@@ -5,7 +5,7 @@ renderContentOn: xul
 	
 	xul vbox flex: 1; style: 'overflow: auto'; with: [
 
-		"xul description with: [xul heading: 'XUL Textboxes'.]."
+		xul description with: [xul heading: 'XUL Textboxes'.].
 		xul hbox align: 'center'; with: [
 			xul label style: 'width:10em'; value: 'Default:'.
 			i1 := xul textbox oninput: [output set: #value to: (i1 get: #value)]; yourself].

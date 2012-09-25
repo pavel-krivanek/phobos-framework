@@ -3,7 +3,7 @@ renderContentOn: xul
 
 	xul vbox flex: 1; style: 'overflow: auto'; with: [
 
-		"xul description with: [xul heading: 'XUL Box Layout'.]."
+		xul description with: [xul heading: 'XUL Box Layout'.].
 
 		self renderFlexinesOn: xul.
 		self renderDirectionOn: xul.

@@ -3,7 +3,7 @@ renderContentOn: xul
 
 	xul vbox flex: 1; style: 'overflow: auto'; with: [
 
-		"xul description with: [xul heading: 'XUL Labels'.]."
+		xul description with: [xul heading: 'XUL Labels'.].
 			
 		xul groupbox with: [
 			xul description with: [ xul text: 'This is a multi-line description. 

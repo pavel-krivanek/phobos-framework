@@ -7,7 +7,7 @@ renderContentOn: xul
 
 	xul vbox flex: 1; style: 'overflow: auto'; with: [
 
-		"xul description with: [xul heading: 'XUL Childless Trees'.]."
+		xul description with: [xul heading: 'XUL Childless Trees'.].
 			
 		xul groupbox flex: 2; with: [
 			xul caption label: 'single selection'.

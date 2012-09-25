@@ -5,7 +5,7 @@ renderContentOn: xul
 
 	xul vbox flex: 1; style: 'overflow: auto'; with: [
 
-		"xul description with: [xul heading: 'XUL Popups'.]."
+		xul description with: [xul heading: 'XUL Popups'.].
 			
 		xul hbox with: [
 			xul groupbox flex: 1; orient: 'horizontal'; with: [

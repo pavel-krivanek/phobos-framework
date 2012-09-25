@@ -3,7 +3,7 @@ renderContentOn: xul
 
 	xul vbox flex: 1; style: 'overflow: auto'; with: [
 
-		"xul description with: [xul heading: 'XUL Scrolling'.]."
+		xul description with: [xul heading: 'XUL Scrolling'.].
 
 		xul hbox with: [		
 			xul groupbox flex: 1; with: [

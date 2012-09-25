@@ -3,7 +3,7 @@ renderContentOn: xul
 
 	xul vbox flex: 1; style: 'overflow: auto'; with: [
 
-		"xul description with: [xul heading: 'XUL Tabs'.]."
+		xul description with: [xul heading: 'XUL Tabs'.].
 			
 		xul groupbox with: [
 			xul description with: 'This is the standard tabbox.  It looks fine.'.

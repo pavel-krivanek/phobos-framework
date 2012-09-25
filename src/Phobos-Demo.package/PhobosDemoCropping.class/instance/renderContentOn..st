@@ -3,7 +3,7 @@ renderContentOn: xul
 
 	xul vbox flex: 1; style: 'overflow: auto'; with: [
 
-		"xul description with: [xul heading: 'XUL Cropping'.]."
+		xul description with: [xul heading: 'XUL Cropping'.].
 			
 		xul groupbox with: [
 			xul caption label: 'start'.

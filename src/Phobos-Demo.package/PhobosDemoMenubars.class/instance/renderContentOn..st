@@ -3,7 +3,7 @@ renderContentOn: xul
 
 	xul vbox flex: 1; style: 'overflow: auto'; with: [
 
-		"xul description with: [xul heading: 'XUL Toolbars, Menubars and Statusbars'.]."
+		xul description with: [xul heading: 'XUL Toolbars, Menubars and Statusbars'.].
 			
 		xul groupbox with: [
 			xul caption label: 'non-functioning tool and menu bars'.

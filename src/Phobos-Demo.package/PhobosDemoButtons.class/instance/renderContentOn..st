@@ -3,7 +3,7 @@ renderContentOn: xul
 
 	xul vbox flex: 1; style: 'overflow: auto'; with: [
 
-		"xul description with: [xul heading: 'XUL Buttons'.]."
+		xul description with: [xul heading: 'XUL Buttons'.].
 
 		self renderButtonsTabOn: xul.
 		self renderButtonsAccessOn: xul.

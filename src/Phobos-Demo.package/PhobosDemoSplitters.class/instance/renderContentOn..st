@@ -3,7 +3,7 @@ renderContentOn: xul
 
 	xul vbox flex: 1; style: 'overflow: auto'; with: [
 
-		"xul description with: [xul heading: 'XUL Splitters'.]."
+		xul description with: [xul heading: 'XUL Splitters'.].
 		
 		xul groupbox orient: 'horizontal'; flex: 1; with: [
 			xul caption label: 'collapse before'.

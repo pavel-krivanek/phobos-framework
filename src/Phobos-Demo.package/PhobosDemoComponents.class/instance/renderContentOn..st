@@ -5,7 +5,7 @@ renderContentOn: xul
 	
 	xul vbox flex: 1; style: 'overflow: auto'; with: [
 
-		"xul description with: [xul heading: 'Components'.]."
+		xul description with: [xul heading: 'Components'.].
 			
 			xul groupbox with: [
 				xul caption label: 'Component refreshing'.
