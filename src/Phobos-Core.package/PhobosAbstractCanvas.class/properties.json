@@ -9,7 +9,8 @@
 		"component",
 		"currentTag",
 		"nodes",
-		"parentTag"
+		"parentTag",
+		"parentCanvas"
 	],
 	"name" : "PhobosAbstractCanvas",
 	"type" : "normal"

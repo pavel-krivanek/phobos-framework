@@ -6,7 +6,7 @@ jsonWriteOn: s
 	needComma := false.
 
 	s nextPut: ${.
-		s nextPutAll: '"namespace":'. 'XUL_NS'  jsonWriteOn: s.
+		s nextPutAll: '"namespace":'. self namespace jsonWriteOn: s.
 		s nextPutAll: ', "prefix":'. '' jsonWriteOn: s.
 		s nextPutAll: ', "tagName":'. self tag jsonWriteOn: s.
 		s nextPutAll: ', "attributes":['.
