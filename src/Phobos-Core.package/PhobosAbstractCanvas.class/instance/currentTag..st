@@ -1,4 +1,7 @@
 accessing
 currentTag: anObject
 	
-	currentTag := anObject
+	parentCanvas 
+		ifNil: [ currentTag := anObject ]
+		ifNotNil: [parentCanvas currentTag: anObject]
+

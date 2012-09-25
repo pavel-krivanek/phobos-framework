@@ -1,4 +1,6 @@
 accessing
 parentTag
 	
-	^ parentTag
+	^ parentCanvas 
+		ifNil: [ parentTag ]
+		ifNotNil: [parentCanvas parentTag]

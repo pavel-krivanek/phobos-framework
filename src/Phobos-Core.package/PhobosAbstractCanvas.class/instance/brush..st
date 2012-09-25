@@ -3,7 +3,7 @@ brush: aTag
 
 	| target |
 	target := self targetCanvas.
-	aTag parentTag: currentTag.
+	aTag parentTag: self currentTag.
 	aTag canvas: target.
 	aTag parentTag
 		ifNil: [target addTag: aTag]
