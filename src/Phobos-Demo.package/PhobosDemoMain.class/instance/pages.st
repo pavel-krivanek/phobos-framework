@@ -4,10 +4,11 @@ pages
 	^ { 
 "		'Forms' -> XULPeriodicTableForms.
 "
-		'Images' -> PhobosDemoImages.
-		'Components' -> PhobosDemoComponents.
+		'Trees, Custom' -> PhobosDemoTreesCustom.
 		'Trees, Nested' -> PhobosDemoTreesNested.
 		'Trees, Simple' -> PhobosDemoTreesSimple.
+		'Images' -> PhobosDemoImages.
+		'Components' -> PhobosDemoComponents.
 		'TextBoxes' -> PhobosDemoTextBoxes.
 		'Tabs' -> PhobosDemoTabs.
 		'Stacks and Decks' -> PhobosDemoStacksAndDecks.

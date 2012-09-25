@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "PhobosComponent",
+	"category" : "Phobos-Demo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"tree",
+		"numCol",
+		"textCol1",
+		"textCol2"
+	],
+	"name" : "PhobosDemoTreesCustom",
+	"type" : "normal"
+}
