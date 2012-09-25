@@ -4,6 +4,7 @@ pages
 	^ { 
 "		'Forms' -> XULPeriodicTableForms.
 "
+		'Images' -> PhobosDemoImages.
 		'Components' -> PhobosDemoComponents.
 		'Trees, Nested' -> PhobosDemoTreesNested.
 		'Trees, Simple' -> PhobosDemoTreesSimple.
@@ -19,7 +20,6 @@ pages
 		'Lists' -> PhobosDemoLists.
 		'Progressmeters' -> PhobosDemoProgressmeters.
 		'Labels' -> PhobosDemoLabels.
-		'Images' -> PhobosDemoImages.
 		'Grids' -> PhobosDemoGrids.
 		'Cropping' -> PhobosDemoCropping.
 		'Colorpickers' -> PhobosDemoColorpickers.

@@ -2,7 +2,7 @@ as yet unclassified
 renderButtonsImagesOn: xul
 
 	| currentState  |
-
+	
 	xul groupbox flex: 1; with: [
 		xul caption label: 'images'.
 		xul vbox with: [

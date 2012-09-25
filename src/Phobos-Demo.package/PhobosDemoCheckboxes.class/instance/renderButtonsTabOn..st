@@ -2,7 +2,7 @@ as yet unclassified
 renderButtonsTabOn: xul
 
 	| currentState  |
-
+	
 	xul groupbox flex: 1; with: [
 		xul caption label: 'tabbing'.
 		xul vbox with: [

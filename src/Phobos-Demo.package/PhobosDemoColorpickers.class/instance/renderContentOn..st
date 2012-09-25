@@ -9,7 +9,7 @@ renderContentOn: xul
 		xul hbox with: [
 			
 			xul groupbox with: [
-				xul label: 'default colorpicker'.
+				xul caption label: 'default colorpicker'.
 				picker1 := xul colorpicker 
 					onselect: [color1 set: #value to: (picker1 get: #color)];
 					yourself.
@@ -21,7 +21,7 @@ renderContentOn: xul
 			].
 
 			xul groupbox with: [
-				xul label: 'button type'.
+				xul caption label: 'button type'.
 				xul description value: 'Press the button'.
 				xul description value: 'and doubleclick'.
 				xul description value: 'to select a color'.

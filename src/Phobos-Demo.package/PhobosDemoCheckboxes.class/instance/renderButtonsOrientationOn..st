@@ -2,7 +2,7 @@ as yet unclassified
 renderButtonsOrientationOn: xul
 
 	| currentState  |
-	
+		
 	xul groupbox flex: 1; with: [
 		xul caption label: 'orientation'.
 		xul vbox with: [

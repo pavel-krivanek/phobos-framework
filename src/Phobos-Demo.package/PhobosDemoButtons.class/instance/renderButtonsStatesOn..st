@@ -1,6 +1,6 @@
 as yet unclassified
 renderButtonsStatesOn: xul
-
+	
 	| currentState  |
 	
 	xul groupbox with: [
