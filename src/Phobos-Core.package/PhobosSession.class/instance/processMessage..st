@@ -7,19 +7,21 @@ processMessage: message
 	
 	msg := PhobosMessage from: message.
 	(msg type = #getMainWindowComponent) ifTrue: [
-		| newMessage |
+		| newMessage component |
 		self registerWindow: #mainWindow.
-		xul := (self getMain: #mainWindow) rendered.
+		component := self getMain: #mainWindow.
+		xul := component rendered.
 		newMessage := PhobosMessage new.
 		newMessage type: #replaceComponentInDocument.
 		newMessage window: #mainWindow.
 		newMessage target: #mainWindowComponent.
 		newMessage content: (Json render: xul).
 		self webSocket sendMessage: (Json render: newMessage ).
+		component finishRenderingWithChildren.
 		].
 	
 	(msg type = #runClosure) ifTrue: [
-		(closures at: msg target) value.
+		(closures at: msg target) cull: msg.
 		].	
 		
 	(msg type = #returnValue) ifTrue: [
