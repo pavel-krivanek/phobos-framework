@@ -7,7 +7,7 @@ setAttribute: anAttributeName to: aValue
 	
 	msg := PhobosMessage new.
 	msg type: #setAttribute.
-	msg window: nil.
+	msg window: self canvas component window.
 	msg target: id.
 	msg content: anAttributeName asString.
 	msg argument: aValue.
