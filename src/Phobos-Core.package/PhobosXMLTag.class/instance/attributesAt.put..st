@@ -7,7 +7,7 @@ attributesAt: aKey put: aValue
 		ifTrue: [
 			| closureId |
 			closureId := self canvas component registerClosure: aValue.
-			'runClosure("', closureId, '")'.]
+			'phobos.runClosure("', closureId, '")'.]
 		ifFalse: [aValue].
 
 	^ self attributes add: (aKey -> val)
