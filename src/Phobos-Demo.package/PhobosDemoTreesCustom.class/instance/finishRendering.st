@@ -12,7 +12,7 @@ finishRendering
 
 		 getCellText: function(row,column){ return runClosure(''', (self registerClosure: getCellText), ''', [row, column.element.getAttribute(''id'')]) },  "	
 
-	self evaluateJS: ('window.document.getElementById("', tree id, '").view={
+	self evaluateJS: ('phobos.getWindow("', self window asString, '").document.getElementById("', tree id, '").view={
   		 rowCount: ', self rowsCount asString, ',
   		 getCellText: function(row,column){ if (column.element.getAttribute(''id'') == "', numCol id, '") return row+1; else return "some text" },  
   		 getCellValue: function(row,column){ if (column.element.getAttribute(''id'') == "', numCol id, '") return row+1; else return "some text" },  
@@ -21,7 +21,8 @@ finishRendering
   		 isSeparator: function(row){ return false; },  
   		 isSorted: function(){ return false; },  
   		 getLevel: function(row){ return 0; },  
-  		 getImageSrc: function(row,col){ return "https://sites.google.com/a/wvde.k12.wv.us/oaar-file-cabinet/system/app/pagetypes/filecabinet/icon-folder.gif"; },  
+  		 getImageSrc: function(row,col){
+			 if (col.element.getAttribute(''id'') == "', textCol1 id, '") return "https://sites.google.com/a/wvde.k12.wv.us/oaar-file-cabinet/system/app/pagetypes/filecabinet/icon-folder.gif"; else return null },  
   		 getRowProperties: function(row,props){},  
   		 getCellProperties: function(row,col,props){},  
   		 getColumnProperties: function(colid,col,props){}  
