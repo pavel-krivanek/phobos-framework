@@ -4,6 +4,7 @@ pages
 	^ { 
 "		'Forms' -> XULPeriodicTableForms.
 "
+		'Forms' -> PhobosDemoForms.
 		'Sections' -> PhobosDemoSections.
 		'Box Layout' -> PhobosDemoBoxLayout.
 		'Trees, Custom' -> PhobosDemoTreesCustom.

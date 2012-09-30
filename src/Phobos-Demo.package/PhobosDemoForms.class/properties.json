@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "",
+	"super" : "PhobosComponent",
+	"category" : "Phobos-Demo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"color",
+		"data",
+		"date",
+		"items",
+		"name",
+		"number1",
+		"number2",
+		"password",
+		"scale",
+		"surname",
+		"rememberMe"
+	],
+	"name" : "PhobosDemoForms",
+	"type" : "normal"
+}
