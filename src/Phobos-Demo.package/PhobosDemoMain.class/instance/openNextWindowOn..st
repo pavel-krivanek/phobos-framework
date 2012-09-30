@@ -13,7 +13,7 @@ openNextWindowOn: xul
 		PhobosCurrentSession value webSocket sendMessage: (Json render: newMessage ).
 
 		PhobosContinuationNotification signal.].
-	
+
 	self session registerWindow: winId.
 	
 	component := PhobosDemoMain on: winId.
@@ -25,6 +25,7 @@ openNextWindowOn: xul
 	msg content: (Json render: renderer).
 	self session webSocket sendMessage: (Json render: msg ).	
 	
+	component finishRenderingWithChildren.
 	
 	
 	.	

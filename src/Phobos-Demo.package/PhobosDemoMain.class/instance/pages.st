@@ -4,6 +4,8 @@ pages
 	^ { 
 "		'Forms' -> XULPeriodicTableForms.
 "
+		'Sections' -> PhobosDemoSections.
+		'Box Layout' -> PhobosDemoBoxLayout.
 		'Trees, Custom' -> PhobosDemoTreesCustom.
 		'Trees, Nested' -> PhobosDemoTreesNested.
 		'Trees, Simple' -> PhobosDemoTreesSimple.
@@ -25,7 +27,6 @@ pages
 		'Cropping' -> PhobosDemoCropping.
 		'Colorpickers' -> PhobosDemoColorpickers.
 		'Checkboxes' -> PhobosDemoCheckboxes. 
-		'Box Layout' -> PhobosDemoBoxLayout.
 
 "
 		'Call/Answer' -> XULComponent1.
