@@ -28,7 +28,11 @@ processMessage: message
 		(closures at: msg target) value: msg argument.
 		closures removeKey: msg target.
 		].			
-		
+
+	(msg type = #passValues) ifTrue: [
+		self passValues: msg.
+		].
+			
 	] on: PhobosContinuationNotification do: [:n | "do nothing" ].
 "
 xul := PhobosXULCanvas new.

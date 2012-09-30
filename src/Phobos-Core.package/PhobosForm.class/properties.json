@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PhobosSection",
+	"category" : "Phobos-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PhobosForm",
+	"type" : "normal"
+}
