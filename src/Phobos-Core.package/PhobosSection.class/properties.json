@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Phobos-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"block",
+		"canvas",
+		"id",
+		"window"
+	],
+	"name" : "PhobosSection",
+	"type" : "normal"
+}
