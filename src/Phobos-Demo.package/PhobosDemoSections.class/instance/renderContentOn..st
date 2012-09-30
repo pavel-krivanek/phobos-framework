@@ -11,9 +11,9 @@ renderContentOn: xul
 				xul groupbox with: [
 					xul caption label: 'This is a section'.
 					xul description value: 'Reresh button clicks:'.
-					list ifEmpty: [xul description value: '(none)'].
-					list do: [:each |
-						xul description value: each].
+					xul listbox with: [
+						list do: [:each |
+							xul listitem label: each]].
 ]].
 			xul button label: 'Refresh'; oncommand: [
 				list add: DateAndTime now asString.
