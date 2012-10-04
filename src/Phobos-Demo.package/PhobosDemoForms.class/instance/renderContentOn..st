@@ -45,8 +45,13 @@ renderContentOn: xul
 	"					xul hbox pack: #center; with: [
 							xul button label: 'Submit'; style: 'width: !10em'; oncommand: [
 								self processForm: form.
-								section refresh.
-								]]]]].
+								form refresh.
+								section refresh
+								].
+							xul button label: 'Restore'; style: 'width: !10em'; oncommand: [
+								form refresh.
+								].
+							]]]].
 					section := xul section: [
 						self renderResultsOn: xul]										
 				]] 

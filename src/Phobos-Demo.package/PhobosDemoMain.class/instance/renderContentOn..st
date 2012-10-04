@@ -1,7 +1,7 @@
 as yet unclassified
 renderContentOn: xml
 
-	| list srcSectionId ajax |
+	| list srcSectionId ajax srcSection |
 "	
 	listId := WAExternalID new.
 	srcSectionId := WAExternalID new.
@@ -29,6 +29,7 @@ renderContentOn: xml
 				newComponent := (self pages at: selectedIndex + 1) value on: self window.
 				newComponent replace: child.
 				child := newComponent.
+				srcSection refresh.
 				];
 			with: [
 				self pages do: [:pageAssoc |
@@ -45,8 +46,9 @@ renderContentOn: xml
 			xml tabpanels flex: 1; with: [
 				xml tabpanel with: [ xml vbox flex: 1; style: 'overflow: auto'; with: [xml render: child] ].
 				xml tabpanel with: [ 
-					"xml section: srcSectionId with: [
-						self renderSourceOn: xml ] "].
+					srcSection := xml section: [
+						self renderSourceOn: xml.
+						]].
 				xml tabpanel. ]].
 	].
 

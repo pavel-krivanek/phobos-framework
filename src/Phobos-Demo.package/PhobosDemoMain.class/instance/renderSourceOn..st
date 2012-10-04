@@ -1,11 +1,10 @@
 as yet unclassified
-renderSourceOn: xml
+renderSourceOn: xul
 
-	| src |
-"
-	src := String streamContents: [:s | child class fileOutOn: s ].
-	
-	xml vBox flex: 1; style: 'overflow: auto'; with: [ 
-		xml html: '<pre>'.
-		xml text: src. 
-		xml html: '</pre>'."
+	| src html |	
+		
+	src := String streamContents: [:s | child class fileOutOn: s ].		
+			xul vbox flex: 1; style: 'overflow: auto'; with: [
+				html := xul HTML.
+				html pre with: [		
+					html text: (src asHTMLString copyReplaceAll: String cr with: String lf)]]
