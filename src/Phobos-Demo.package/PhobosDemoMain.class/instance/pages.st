@@ -2,8 +2,6 @@ as yet unclassified
 pages
 
 	^ { 
-"		'Forms' -> XULPeriodicTableForms.
-"
 		'Forms' -> PhobosDemoForms.
 		'Sections' -> PhobosDemoSections.
 		'Box Layout' -> PhobosDemoBoxLayout.
@@ -28,9 +26,4 @@ pages
 		'Cropping' -> PhobosDemoCropping.
 		'Colorpickers' -> PhobosDemoColorpickers.
 		'Checkboxes' -> PhobosDemoCheckboxes. 
-
-"
-		'Call/Answer' -> XULComponent1.
-		'IFrame' -> XULPeriodicTableIFrame.
-		'Editor' -> XULPeriodicTableEditor."
 	}
