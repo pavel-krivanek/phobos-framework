@@ -9,14 +9,15 @@
 		"color",
 		"data",
 		"date",
+		"gender",
 		"items",
 		"name",
 		"number1",
 		"number2",
 		"password",
+		"rememberMe",
 		"scale",
-		"surname",
-		"rememberMe"
+		"surname"
 	],
 	"name" : "PhobosDemoForms",
 	"type" : "normal"

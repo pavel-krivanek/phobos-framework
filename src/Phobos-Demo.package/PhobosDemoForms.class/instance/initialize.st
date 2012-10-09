@@ -10,6 +10,8 @@ initialize
 	scale := 42.
 	surname := ''.
 	rememberMe := true.
+	gender := #male.
+	items := #('item 3' 'item 4').
 
 	super initialize.
 	

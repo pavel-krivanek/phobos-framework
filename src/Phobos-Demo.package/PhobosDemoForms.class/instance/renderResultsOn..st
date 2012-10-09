@@ -27,4 +27,9 @@ renderResultsOn: xul
 			xul listitem with: [
 				xul listcell label: 'color'. xul listcell label: self color asString].
 			xul listitem with: [
-				xul listcell label: 'date'. xul listcell label: self date asString]]]
+				xul listcell label: 'date'. xul listcell label: self date asString].
+			xul listitem with: [
+				xul listcell label: 'gender'. xul listcell label: self gender asString].			
+			xul listitem with: [
+				xul listcell label: 'items'. xul listcell label: self items asString].			
+	]]

@@ -37,12 +37,18 @@ renderContentOn: xul
 							xul label style: 'width: 10em'; with: 'color:'.
 							xul colorpicker type: #button; on: #color of: self.].
 						xul hbox align: #center; with: [
-							xul label style: 'width: 10em'; with: 'date'.
+							xul label style: 'width: 10em'; with: 'date:'.
 							xul datepicker type: #popup; firstdayofweek: 1; on: #date of: self.].
-"						xul hbox align: #center; with: [
-							xul label style: 'width: 10em'; with: 'items'.
-							xul datepicker seltype: #multiple; firstdayofweek: 1; on: #date of: self.].
-	"					xul hbox pack: #center; with: [
+						xul hbox align: #center; with: [
+							xul label style: 'width: 10em'; with: 'gender:'.
+							xul radiogroup 
+								on: #gender of: self values: #(male female) ].
+						xul hbox align: #center; with: [
+							xul label style: 'width: 10em'; with: 'items:'.
+							xul listbox seltype: #multiple; 
+								rows: 6; 
+								on: #items of: self values: #('item 1' 'item 2' 'item 3' 'item 4' 'item 5') ].
+					xul hbox pack: #center; with: [
 							xul button label: 'Submit'; style: 'width: !10em'; oncommand: [
 								self processForm: form.
 								form refresh.
