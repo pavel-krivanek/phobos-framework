@@ -4,7 +4,9 @@
 	"category" : "Phobos-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"lastId"
+	],
 	"instvars" : [ ],
 	"name" : "PhobosId",
 	"type" : "normal"

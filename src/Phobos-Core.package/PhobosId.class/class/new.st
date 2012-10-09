@@ -3,4 +3,4 @@ new
 
 	lastId ifNil: [lastId := 1].
 	lastId := lastId + 1.
-	^ 'XULID_', lastId asString.
+	^ 'XULID_SERVER_', lastId asString.
