@@ -8,6 +8,9 @@ processMessage: message
 	msg := PhobosMessage from: message.
 	(msg type = #getMainWindowComponent) ifTrue: [
 		| newMessage component |
+		self platform: (msg argument at: #platform).
+		self language: (msg argument at: #language).
+		self baseURI: (msg argument at: #baseURI).
 		self registerWindow: #mainWindow.
 		component := self getMain: #mainWindow.
 		xul := component rendered.

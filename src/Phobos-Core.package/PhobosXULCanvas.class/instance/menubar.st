@@ -1,4 +1,8 @@
 as yet unclassified
 menubar
 
-	^ self brush: XULMenubarTag new
+	^ (self component session platform beginsWith: 'MacIntel')
+		ifTrue: [ self brush: XULToolbarTag new]
+		ifFalse: [ self brush: XULMenubarTag new]
+
+	

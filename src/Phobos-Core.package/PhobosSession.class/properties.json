@@ -6,11 +6,14 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"id",
-		"mainWindowComponent",
-		"webSocket",
 		"application",
+		"baseURI",
 		"closures",
+		"id",
+		"language",
+		"mainWindowComponent",
+		"platform",
+		"webSocket",
 		"windows"
 	],
 	"name" : "PhobosSession",
