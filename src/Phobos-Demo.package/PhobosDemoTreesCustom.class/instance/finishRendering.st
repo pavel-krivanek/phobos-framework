@@ -22,7 +22,7 @@ finishRendering
   		 isSorted: function(){ return false; },  
   		 getLevel: function(row){ return 0; },  
   		 getImageSrc: function(row,col){
-			 if (col.element.getAttribute(''id'') == "', textCol1 id, '") return "https://sites.google.com/a/wvde.k12.wv.us/oaar-file-cabinet/system/app/pagetypes/filecabinet/icon-folder.gif"; else return null },  
+			 if (col.element.getAttribute(''id'') == "', textCol1 id, '") return "', self session baseURI, 'images/icon-folder.gif"; else return null },  
   		 getRowProperties: function(row,props){},  
   		 getCellProperties: function(row,col,props){},  
   		 getColumnProperties: function(colid,col,props){}  

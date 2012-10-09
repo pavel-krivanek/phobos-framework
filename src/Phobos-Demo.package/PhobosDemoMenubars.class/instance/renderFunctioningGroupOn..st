@@ -10,7 +10,7 @@ renderFunctioningGroupOn: xul
 				xul toolbarbutton label: 'Color:'.
 				#(red yellow green cyan blue magenta) do: [:color |
 					xul toolbarbutton type: 'radio'; name: 'color'; 
-						image: 'http://www.hevanet.com/acorbin/xul/images/', color, '_apple.png'; 
+						image: self session baseURI, 'images/', color, '_apple.png'; 
 						oncommand: [box set: 'style.background' to: color]].
 				]].
 
