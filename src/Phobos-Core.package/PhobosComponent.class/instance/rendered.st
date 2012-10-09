@@ -7,7 +7,7 @@ rendered
 	renderer := self rendererClass for: self.
 	
 	[	renderer sectionStart: self id.
-		self renderContentOn: renderer.
+		self renderOn: renderer.
 		renderer sectionEnd: self id.
 	] on: PhobosContinuationNotification do: [:n | "do nothing" ].
 			

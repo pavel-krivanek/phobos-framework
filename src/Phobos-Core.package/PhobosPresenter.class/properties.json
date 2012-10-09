@@ -7,12 +7,9 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"id",
-		"mainWindowComponent",
-		"webSocket",
-		"application",
-		"closures",
-		"windows"
+		"registeredClosures",
+		"window"
 	],
-	"name" : "PhobosSession",
+	"name" : "PhobosPresenter",
 	"type" : "normal"
 }

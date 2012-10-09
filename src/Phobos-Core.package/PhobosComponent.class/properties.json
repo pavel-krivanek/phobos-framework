@@ -1,14 +1,12 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "PhobosPresenter",
 	"category" : "Phobos-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"id",
-		"registeredClosures",
-		"window"
+		"decoration"
 	],
 	"name" : "PhobosComponent",
 	"type" : "normal"

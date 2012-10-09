@@ -1,18 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "PhobosPresenter",
 	"category" : "Phobos-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"id",
-		"mainWindowComponent",
-		"webSocket",
-		"application",
-		"closures",
-		"windows"
+		"next"
 	],
-	"name" : "PhobosSession",
+	"name" : "PhobosDecoration",
 	"type" : "normal"
 }

@@ -5,5 +5,5 @@ render: aComponent
 
 	aComponent clearClosures.
 	self sectionStart: aComponent id.
-	aComponent renderContentOn: self.
+	aComponent renderOn: self.
 	self sectionEnd: aComponent id.
