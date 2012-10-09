@@ -3,27 +3,27 @@ pages
 
 	^ { 
 		'Forms' -> PhobosDemoForms.
-		'Sections' -> PhobosDemoSections.
 		'Box Layout' -> PhobosDemoBoxLayout.
+		'Buttons' -> PhobosDemoButtons.
+		'Checkboxes' -> PhobosDemoCheckboxes. 
+		'Radiobuttons' -> PhobosDemoRadiobuttons.
+		'Lists' -> PhobosDemoLists.
+		'Images' -> PhobosDemoImages.
+		'TextBoxes' -> PhobosDemoTextBoxes.
+		'Colorpickers' -> PhobosDemoColorpickers.
+		'Labels' -> PhobosDemoLabels.
+		'Popups' -> PhobosDemoPopups.
+		'Tabs' -> PhobosDemoTabs.
+		'Splitters' -> PhobosDemoSplitters.
+		'Stacks and Decks' -> PhobosDemoStacksAndDecks.
+		'Progressmeters' -> PhobosDemoProgressmeters.
+		'Scrolling' -> PhobosDemoScrolling.
+		'Menubars, etc.' -> PhobosDemoMenubars.
+		'Grids' -> PhobosDemoGrids.
+		'Cropping' -> PhobosDemoCropping.
 		'Trees, Custom' -> PhobosDemoTreesCustom.
 		'Trees, Nested' -> PhobosDemoTreesNested.
 		'Trees, Simple' -> PhobosDemoTreesSimple.
-		'Images' -> PhobosDemoImages.
 		'Components' -> PhobosDemoComponents.
-		'TextBoxes' -> PhobosDemoTextBoxes.
-		'Tabs' -> PhobosDemoTabs.
-		'Stacks and Decks' -> PhobosDemoStacksAndDecks.
-		'Splitters' -> PhobosDemoSplitters.
-		'Scrolling' -> PhobosDemoScrolling.
-		'Buttons' -> PhobosDemoButtons.
-		'Radiobuttons' -> PhobosDemoRadiobuttons.
-		'Popups' -> PhobosDemoPopups.
-		'Menubars, etc.' -> PhobosDemoMenubars.
-		'Lists' -> PhobosDemoLists.
-		'Progressmeters' -> PhobosDemoProgressmeters.
-		'Labels' -> PhobosDemoLabels.
-		'Grids' -> PhobosDemoGrids.
-		'Cropping' -> PhobosDemoCropping.
-		'Colorpickers' -> PhobosDemoColorpickers.
-		'Checkboxes' -> PhobosDemoCheckboxes. 
+		'Sections' -> PhobosDemoSections.
 	}

@@ -6,5 +6,5 @@ renderSourceOn: xul
 	src := String streamContents: [:s | child class fileOutOn: s ].		
 			xul vbox flex: 1; style: 'overflow: auto'; with: [
 				html := xul HTML.
-				html pre with: [		
+				html pre style: 'background-color: white'; with: [		
 					html text: (src asHTMLString copyReplaceAll: String cr with: String lf)]]
