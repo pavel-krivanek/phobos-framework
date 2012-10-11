@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "PhobosComponent",
+	"category" : "Phobos-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"browser",
+		"initialContent",
+		"browserReady"
+	],
+	"name" : "PhobosCodeEditor",
+	"type" : "normal"
+}
