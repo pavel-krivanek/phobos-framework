@@ -5,7 +5,7 @@ update: aSymbol
 		
 	aSymbol ifNil: [^self].
 	aSymbol == #flash ifTrue: [^self flash].
-	aSymbol == setTextSelector 
+	aSymbol == getTextSelector 
 		ifTrue: [ 
 			editor setContent: self getText.
 			[script := 'editAreaLoader.setValueEscaped("', self editorId, '", "', self getText asString xulEscape ,'")'. ].
