@@ -1,9 +1,9 @@
 as yet unclassified
 renderContentOn: xul
 
-	| ajax popupId popupSectionId menuAjax listbox |
+	| ajax popupId popupSectionId menuAjax listbox menuSection |
 	
-
+popupId  := PhobosId new.
 "	ajax parameters at: '_param1' put: 'this.selectedIndex'.
 
 	popupId  := WAExternalID new.
@@ -22,12 +22,14 @@ renderContentOn: xul
 		xul menupopup 
 			id: popupId; 
 			onpopupshowing: [
-				| menu |
-				menu := OBPhobosMenu new. 
-				model perform: getMenuSelector with: menu.
-				self refreshRequest: popupSectionId block: [:x | self renderMenu: menu on: x]
+				menuSection refresh.
 				];	
-			with: ["xul section: popupSectionId with: []"].
+			with: [menuSection := xul section: [
+					| menu |
+					menu := OBPhobosMenu new. 
+					model perform: getMenuSelector with: menu.
+					self renderMenu: menu on: xul
+					]"xul section: popupSectionId with: []"].
 	].
 	
 	listbox := xul listbox 

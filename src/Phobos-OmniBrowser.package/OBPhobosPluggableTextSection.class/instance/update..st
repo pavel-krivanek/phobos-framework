@@ -5,9 +5,9 @@ update: aSymbol
 		
 	aSymbol ifNil: [^self].
 	aSymbol == #flash ifTrue: [^self flash].
-	aSymbol == getTextSelector 
-		ifTrue: 
-			[ 
+	aSymbol == setTextSelector 
+		ifTrue: [ 
+			editor setContent: self getText.
 			[script := 'editAreaLoader.setValueEscaped("', self editorId, '", "', self getText asString xulEscape ,'")'. ].
 			"SeasideXULUIManager evaluateScript: script."
 			^ self.

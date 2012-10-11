@@ -3,4 +3,4 @@ initialize
 
 	super initialize.
 	
-	editorId := PhobosId new.
+	editor := PhobosCodeEditor new.

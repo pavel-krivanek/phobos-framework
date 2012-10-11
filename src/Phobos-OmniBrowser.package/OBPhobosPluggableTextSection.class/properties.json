@@ -14,7 +14,8 @@
 		"askBeforeDiscardingEdits",
 		"selectionInterval",
 		"hasEditingConflicts",
-		"editorId"
+		"editorId",
+		"editor"
 	],
 	"name" : "OBPhobosPluggableTextSection",
 	"type" : "normal"

@@ -1,6 +1,8 @@
 as yet unclassified
 renderContentPaneOn: xul 
 
+	xul render: workspace.
+
 	"xul textFieldOn: nil accept: nil.
 	xul enhancedCodeEditor: nil on: nil accept: nil content: '
 	
