@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "OBPhobosPluggableTextSection",
+	"category" : "Phobos-OmniBrowser-Sections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OBPhobosTextFieldSection",
+	"type" : "normal"
+}

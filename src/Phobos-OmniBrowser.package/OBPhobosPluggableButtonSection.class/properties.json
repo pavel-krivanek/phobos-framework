@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "OBPhobosSectionWithModel",
+	"category" : "Phobos-OmniBrowser-Sections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"label",
+		"getStateSelector",
+		"actionSelector",
+		"getLabelSelector"
+	],
+	"name" : "OBPhobosPluggableButtonSection",
+	"type" : "normal"
+}

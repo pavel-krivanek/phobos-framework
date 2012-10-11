@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "",
+	"super" : "OBPhobosSectionWithModel",
+	"category" : "Phobos-OmniBrowser-Sections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"list",
+		"getListSelector",
+		"getIndexSelector",
+		"setIndexSelector",
+		"keystrokeActionSelector",
+		"getListSizeSelector",
+		"getListElementSelector",
+		"dragEnabled",
+		"dropEnabled",
+		"autoDeselect",
+		"getMenuSelector"
+	],
+	"name" : "OBPhobosPluggableListSection",
+	"type" : "normal"
+}

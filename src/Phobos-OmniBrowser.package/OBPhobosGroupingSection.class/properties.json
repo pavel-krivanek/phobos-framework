@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "OBPhobosSection",
+	"category" : "Phobos-OmniBrowser-Sections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"orientation"
+	],
+	"name" : "OBPhobosGroupingSection",
+	"type" : "normal"
+}

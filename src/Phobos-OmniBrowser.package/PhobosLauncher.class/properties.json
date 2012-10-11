@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PhobosApplication",
+	"category" : "Phobos-OmniBrowser-Launcher",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PhobosLauncher",
+	"type" : "normal"
+}

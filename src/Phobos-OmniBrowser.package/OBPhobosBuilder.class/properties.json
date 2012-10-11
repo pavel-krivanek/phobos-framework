@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "OBBuilder",
+	"category" : "Phobos-OmniBrowser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"color"
+	],
+	"name" : "OBPhobosBuilder",
+	"type" : "normal"
+}

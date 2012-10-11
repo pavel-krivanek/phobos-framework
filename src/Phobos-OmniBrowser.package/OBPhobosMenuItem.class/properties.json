@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Phobos-OmniBrowser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"label",
+		"target",
+		"selector",
+		"enabled",
+		"icon"
+	],
+	"name" : "OBPhobosMenuItem",
+	"type" : "normal"
+}

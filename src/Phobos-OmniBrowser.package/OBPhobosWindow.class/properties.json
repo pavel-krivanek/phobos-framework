@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "PhobosComponent",
+	"category" : "Phobos-OmniBrowser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"model",
+		"label",
+		"subsections"
+	],
+	"name" : "OBPhobosWindow",
+	"type" : "normal"
+}

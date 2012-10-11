@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "OBPhobosSectionWithModel",
+	"category" : "Phobos-OmniBrowser-Sections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"buttons",
+		"getListSelector",
+		"selection",
+		"getSelectionSelector",
+		"setSelectionSelector"
+	],
+	"name" : "OBPhobosRadioButtonBarSection",
+	"type" : "normal"
+}

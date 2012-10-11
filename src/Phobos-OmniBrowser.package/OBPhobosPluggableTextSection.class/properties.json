@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "",
+	"super" : "OBPhobosSectionWithModel",
+	"category" : "Phobos-OmniBrowser-Sections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"text",
+		"getTextSelector",
+		"setTextSelector",
+		"getSelectionSelector",
+		"hasUnacceptedEdits",
+		"askBeforeDiscardingEdits",
+		"selectionInterval",
+		"hasEditingConflicts",
+		"editorId"
+	],
+	"name" : "OBPhobosPluggableTextSection",
+	"type" : "normal"
+}

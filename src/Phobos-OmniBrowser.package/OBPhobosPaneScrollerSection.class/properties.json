@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "OBPhobosSectionWithModel",
+	"category" : "Phobos-OmniBrowser-Sections",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"panes"
+	],
+	"name" : "OBPhobosPaneScrollerSection",
+	"type" : "normal"
+}
