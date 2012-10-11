@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CodeMirror: Autoresize Demo</title>
+    <link rel="stylesheet" href="codemirror.css">
+   <link rel="stylesheet" href="amber.css">
+     <script src="codemirror.js"></script>
+    <script src="smalltalk.js"></script>
+
+    <style type="text/css">
+      .CodeMirror {
+        display: block;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 9999;
+      }
+    </style>
+
+   </head>
+  <body>
+    <textarea id="code" name="code"></textarea>
+
+<script>
+
+function winHeight() {
+  return window.innerHeight || (document.documentElement || document.body).clientHeight;
+}
+
+function resizeCodeArea()
+{
+  var wrap = document.editor.getWrapperElement();
+      scroll = document.editor.getScrollerElement();
+    scroll.style.height = winHeight() + "px";
+}
+
+window.onresize = function(event) {
+  resizeCodeArea()
+}
+
+document.editor = CodeMirror.fromTextArea(document.getElementById("code"), {               
+  theme: "amber",
+  lineNumbers: true,
+  enterMode: "flat",
+  mode: "text/x-stsrc",
+  matchBrackets: true,
+/*  extraKeys: {
+        "Ctrl-P": function(cm) {
+          alert("Ctrl-P")
+        },
+        "Esc": function(cm) {
+          alert("Esc")
+        }},
+*/electricChars: false        
+});
+document.documentElement.style.overflow = "hidden";
+resizeCodeArea();
+
+</script>
+
+  </body>
+</html>

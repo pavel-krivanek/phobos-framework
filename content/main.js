@@ -211,11 +211,33 @@ phobos.Session.prototype.processMessage = function(aMessage)
     case "setWindowTitle":
       this.getWindow(aMessage.window).document.title = aMessage.argument;
       break;
+    case "setBrowserFinishCallback":
+      this.setBrowserFinishCallback(aMessage.window, aMessage.argument, aMessage.target);
+      break;
+    case "setCodeMirrorText":
+      this.setCodeMirrorText(aMessage.window, aMessage.argument, aMessage.content);
+      break;
     default:
       break;
   }
 }
 
+
+phobos.Session.prototype.setBrowserFinishCallback = function(windowId, elementId, continuation)
+{
+  var self = this;
+  var browser = this.getWindow(windowId).document.getElementById(elementId);
+  var listener = xuljet.defaultProgressListener();
+  listener.onOverallFinish = function() { 
+    phobos.runClosure(continuation);
+  };
+  browser.addProgressListener( listener, Components.interfaces.nsIWebProgress.NOTIFY_ALL);
+}
+
+phobos.Session.prototype.setCodeMirrorText = function(windowId, elementId, text)
+{
+  this.getWindow(windowId).document.getElementById(elementId).contentDocument.editor.setValue(text);
+}
 
 phobos.Session.prototype.printNodes = function(windowID, nodes)
 {
@@ -429,7 +451,6 @@ phobos.Session.prototype.setProperty = function(windowId, elementId, propertyNam
 phobos.Session.prototype.setAttribute = function(windowId, elementId, attributeName, aValue)
 {
   this.getWindow(windowId).document.getElementById(elementId).setAttribute(attributeName, aValue);
-  
 }
 
 phobos.runClosure = function(id, anArgument)
