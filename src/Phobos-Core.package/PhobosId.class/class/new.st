@@ -1,6 +1,6 @@
 as yet unclassified
 new
 
-	lastId ifNil: [lastId := 1].
-	lastId := lastId + 1.
-	^ 'XULID_SERVER_', lastId asString.
+	LastId ifNil: [LastId := 1].
+	LastId := LastId + 1.
+	^ 'XULID_SERVER_', LastId asString.
