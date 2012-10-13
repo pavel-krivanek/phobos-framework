@@ -31,5 +31,5 @@ renderContentOn: xul
 		xul description value: 'arrowscrollbox - hover over the arrow to scroll'.
 		xul arrowscrollbox orient: 'vertical'; flex: 1;  with: [
 			1 to: 31 do: [:i | 
-				xul button label: 'item ', i displayString ]].
+				xul button label: 'item ', i asString ]].
 	]
