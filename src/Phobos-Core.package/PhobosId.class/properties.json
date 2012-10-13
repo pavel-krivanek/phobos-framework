@@ -5,8 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [
-		"LastId",
-		"lastId"
+		"LastId"
 	],
 	"instvars" : [ ],
 	"name" : "PhobosId",
