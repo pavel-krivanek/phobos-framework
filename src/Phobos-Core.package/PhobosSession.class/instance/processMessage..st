@@ -4,7 +4,6 @@ processMessage: message
 	| xul msg |
 	
 	[
-	
 	msg := PhobosMessage from: message.
 	(msg type = #getMainWindowComponent) ifTrue: [
 		| newMessage component |
