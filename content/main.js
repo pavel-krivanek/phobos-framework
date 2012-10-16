@@ -48,6 +48,21 @@ phobos.createNodesFromData = function(obj)
     var attr = obj.attributes[a];
     node.setAttribute(attr.key, attr.value)
   }
+   
+  for (var p = 0; p < obj.properties.length; p++) {
+    var prop = obj.properties[p];
+
+    var splitted = prop.value.split('.');
+    var result = window;
+    splitted.forEach(function (each) {
+      result = result[each]
+    })  
+    node[prop.key] = result;
+ 
+  }  
+  
+  //node["__phobos_properties"] = obj.properties;
+  
   
   if (obj.children) {
     for (var i = 0; i < obj.children.length; i++)
@@ -469,6 +484,51 @@ phobos.Session.prototype.replaceBodyInDocument = function(aDocument, newNodes)
     aDocument.body.appendChild(clonedNode);  
   });
 }
+
+phobos.integerInputOnKeyPress = function(elm, event)
+{    
+  
+  if ((event.charCode == 0) && (event.keyCode != 13))
+    return true;
+  
+  var shouldMove = (event.charCode == 0) && (event.keyCode == 13);
+  
+  var newValue = elm.value;
+  
+  if (!shouldMove) {
+    
+    if (!((event.charCode >= 48) && (event.charCode <= 58))) {
+      event.preventDefault();
+      event.stopPropagation();
+      return false;  
+    }
+    
+    var selStart = elm.selectionStart;
+    var selEnd = elm.selectionEnd;
+    var currentValue = elm.value;
+    
+    newValue = currentValue.slice(0, selStart) + String.fromCharCode(event.charCode) + currentValue.slice(selEnd, currentValue.length);
+    
+    elm.value = newValue;
+    
+    elm.setSelectionRange(selStart+1, selStart+1);
+  } 
+
+  var maxLength = parseInt(elm.getAttribute('phobos:maxlength'), 10)
+  
+  if ((newValue.length == maxLength) || ((newValue.length == maxLength) && shouldMove)) {
+    document.commandDispatcher.advanceFocus();
+  }
+     
+  event.preventDefault();
+     
+  var evt = document.createEvent('HTMLEvents');
+  evt.initEvent('change', false, false ); // event type,bubbling,cancelable
+  elm.dispatchEvent(evt);
+ 
+  return false;
+}
+
 
 function startSession()
 {
