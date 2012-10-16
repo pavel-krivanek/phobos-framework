@@ -18,6 +18,17 @@ jsonWriteOn: s
 					s nextPutAll: '"key":'. attr key jsonWriteOn: s.
 					s nextPutAll: ', "value":'. attr value jsonWriteOn: s.
 				s nextPutAll: '}'].
+		s nextPutAll: '], '.
+		needComma := false.
+		s nextPutAll: '"properties":['.
+			(properties ifNil: #()) do: [:attr |
+				needComma
+					ifTrue: [ s nextPut: $, ]
+					ifFalse: [ needComma := true ].
+				s nextPutAll: '{'.
+					s nextPutAll: '"key":'. attr key jsonWriteOn: s.
+					s nextPutAll: ', "value":'. attr value jsonWriteOn: s.
+				s nextPutAll: '}'].
 		s nextPutAll: '], "text":'. '' jsonWriteOn: s.
 		s nextPutAll: ', "children": '. children jsonWriteOn: s.
 	s nextPut: $}.
