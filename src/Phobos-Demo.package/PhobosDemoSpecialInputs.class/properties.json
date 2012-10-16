@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PhobosComponent",
+	"category" : "Phobos-Demo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PhobosDemoSpecialInputs",
+	"type" : "normal"
+}

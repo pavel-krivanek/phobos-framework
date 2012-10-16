@@ -2,6 +2,7 @@ as yet unclassified
 pages
 
 	^ { 
+		'Special inputs' -> PhobosDemoSpecialInputs.
 		'Forms' -> PhobosDemoForms.
 		'Box Layout' -> PhobosDemoBoxLayout.
 		'Buttons' -> PhobosDemoButtons.
