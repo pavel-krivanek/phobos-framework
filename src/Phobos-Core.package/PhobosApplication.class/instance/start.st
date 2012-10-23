@@ -1,15 +1,10 @@
 as yet unclassified
 start
 	
-	self stop.
-	server := ZnServer startOn: self port.
-	handler := PhobosWebSocketHandler new.
-	handler application: self.
-			
- 	server delegate
-		map: 'newSession' 
-		to:  (ZnWebSocketDelegate map: 'newSession' to: handler)."[ :request | self processInitialRequest: request ]."
+	(Smalltalk hasClassNamed: #ZnServer)
+		ifTrue: [ ^ self startOnZinc ].
 		
-	server delegate
-		map: 'serverRunning' 
-		to:  [ :request | ZnResponse ok: (ZnEntity text: 'serverRunning') ].
+	(Smalltalk hasClassNamed: #WebServer)
+		ifTrue: [ ^ self startOnWebClient ].
+		
+	self error: 'no server found'.
