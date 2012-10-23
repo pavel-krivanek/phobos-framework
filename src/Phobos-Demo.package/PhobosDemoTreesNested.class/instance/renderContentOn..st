@@ -1,7 +1,7 @@
 as yet unclassified
 renderContentOn: xul
 
-	| sectionId script | 
+	| script | 
 			
 	script := '(this.contentView.getItemAtIndex(this.currentIndex)).firstChild.firstChild.getAttribute("label")'.
 
@@ -32,14 +32,17 @@ renderContentOn: xul
 					xul treecols with: [
 						xul treecol flex: 1; label: 'Name'.	
 						xul treecol flex: 1; label: 'Sex'.	
-						xul treecol flex: 1; label: 'Attribute'.].
+						xul treecol flex: 1; label: 'Attribute'.
+						xul treecol flex: 1; label: 'Progress'; type: #progressmeter.].
 					xul treechildren with: [
 					self data2 do: [:person |
 						person ifNotNil: [
 							xul treeitem with: [
 								xul treerow with: [
 									person do: [:value |
-										xul treecell label: value]]]]
+										| props |
+										props := person second = #Female ifTrue: ['blueText'] ifFalse: [''].
+										xul treecell properties: props; label: value]]]]
 							ifNil: [
 								xul treeseparator].
 						]]]].
