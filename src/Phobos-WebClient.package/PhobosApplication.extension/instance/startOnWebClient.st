@@ -16,7 +16,7 @@ startOnWebClient
 	WebServer default addService: '/newSession' action:[:req| 
 		| webSocket session |
 		webSocket := req asWebSocket.
-		webSocket timeout: 300. "5 minutes timeout"
+		webSocket timeout: 172800. "two days" 
 
 		session := self sessionClass new.
 		session application: self.
@@ -26,7 +26,13 @@ startOnWebClient
 		webSocket onMessage:[:data|
 			PhobosCurrentSession use: session during: [
 				session processMessage: data
-			]].
+			]].	
+		
+		webSocket onError:[:ex|
+			Transcript cr; show: webSocket.
+			Transcript cr; show: ex description.
+			Transcript cr; show: ex signalerContext longStack.
+		].
 
 		webSocket onClose:[
 			sessions remove: (sessions detect: [:s | s webSocket = webSocket]) ifAbsent: [ ]].			
