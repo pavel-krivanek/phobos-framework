@@ -2,7 +2,6 @@ as yet unclassified
 pages
 
 	^ { 
-		'Special inputs' -> PhobosDemoSpecialInputs.
 		'Forms' -> PhobosDemoForms.
 		'Box Layout' -> PhobosDemoBoxLayout.
 		'Buttons' -> PhobosDemoButtons.
@@ -12,6 +11,7 @@ pages
 		'Images' -> PhobosDemoImages.
 		'TextBoxes' -> PhobosDemoTextBoxes.
 		'Colorpickers' -> PhobosDemoColorpickers.
+		'Special inputs' -> PhobosDemoSpecialInputs.
 		'Labels' -> PhobosDemoLabels.
 		'Popups' -> PhobosDemoPopups.
 		'Tabs' -> PhobosDemoTabs.

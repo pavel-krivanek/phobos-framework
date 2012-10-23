@@ -14,7 +14,8 @@ renderContentOn: xul
 				newComponent := (self pages at: selectedIndex + 1) value on: self window.
 				newComponent replace: child.
 				child := newComponent.
-				srcSection refresh.
+				self refreshSource.
+				
 				];
 			with: [
 				self pages do: [:pageAssoc |

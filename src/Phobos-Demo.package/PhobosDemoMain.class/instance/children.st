@@ -1,4 +1,4 @@
 as yet unclassified
 children
 
-	^ Array with: child
+	^ Array with: child with: source

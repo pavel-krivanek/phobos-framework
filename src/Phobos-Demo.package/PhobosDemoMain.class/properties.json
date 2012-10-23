@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"child"
+		"child",
+		"source"
 	],
 	"name" : "PhobosDemoMain",
 	"type" : "normal"
