@@ -49,12 +49,12 @@ renderContentOn: xul
 								rows: 6; 
 								on: #items of: self values: #('item 1' 'item 2' 'item 3' 'item 4' 'item 5') ].
 					xul hbox pack: #center; with: [
-							xul button label: 'Submit'; style: 'width: !10em'; oncommand: [
+							xul button label: 'Submit'; style: 'width: 10em'; oncommand: [
 								self processForm: form.
 								form refresh.
 								section refresh
 								].
-							xul button label: 'Restore'; style: 'width: !10em'; oncommand: [
+							xul button label: 'Restore'; style: 'width: 10em'; oncommand: [
 								form refresh.
 								].
 							]]]].
