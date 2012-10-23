@@ -4,12 +4,12 @@
 	"category" : "Phobos-Demo",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [
+	"classvars" : [ ],
+	"instvars" : [
 		"day",
 		"month",
 		"year"
 	],
-	"instvars" : [ ],
 	"name" : "PhobosDemoSpecialInputs",
 	"type" : "normal"
 }
