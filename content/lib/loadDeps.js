@@ -48,13 +48,16 @@ this._require = function(moduleName, aModuleRoot)
     }
     var refPathParts = refPath.split('/');
     refPathParts.pop();
-    var part;
-    while (part = relPathParts.shift()) {
-      if (part == '.') { continue; }
+    var part = relPathParts.shift();
+    while (part) {
+      if (part == '.') {
+        part = relPathParts.shift();
+        continue; }
       else if (part == '..' 
         && refPathParts.length 
         && refPathParts[refPathParts.length-1] != '..') { refPathParts.pop(); }
       else { refPathParts.push(part); }
+      part = relPathParts.shift();
     }
     return refPathParts.join('/');
   };
