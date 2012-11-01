@@ -14,7 +14,7 @@ baseline1x0x0: spec
 			
 		spec
 			project: 'ZincHTTPComponents' with: [
-				spec repository: 'http://www.squeaksource.com/MetacelloRepository'.
+				spec repository: 'http://mc.stfx.eu/ZincHTTPComponents'.
 				spec className: 'ConfigurationOfZincHTTPComponents'.
 				spec file: 'ConfigurationOfZincHTTPComponents'.
 				spec loads: #('Zinc-HTTP' 'Zinc-FileSystem' 'Zinc-Tests' 'Zinc-WebSocket-Core')].
@@ -25,7 +25,7 @@ baseline1x0x0: spec
 			spec file: 'ConfigurationOfGrease'.
 			spec loads: #('Grease-Core' 'Grease-Pharo-Core' )].
 
-		spec project: 'Seaside' with: [
+		spec project: 'Seaside-Continuation' with: [
 			spec repository: seasideRepository.
 			spec className: 'ConfigurationOfSeaside30'.
 			spec file: 'ConfigurationOfSeaside30'.
@@ -34,7 +34,7 @@ baseline1x0x0: spec
 		spec package: 'JSON' with: [
 			spec repository: 'http://www.squeaksource.com/SCouchDB'].
 			
-		spec package: 'Phobos-Core' with: [spec requires: #('JSON') ].
+		spec package: 'Phobos-Core' with: [spec requires: #('ZincHTTPComponents' 'Grease' 'Seaside-Continuation' 'JSON') ].
 		spec package: 'Phobos-XUL' with: [spec requires: #('Phobos-Core') ].
 		spec package: 'Phobos-HTML' with: [spec requires: #('Phobos-Core') ].
 		spec package: 'Phobos-Demo' with: [spec requires: #('Phobos-XUL' 'Phobos-HTML') ].
