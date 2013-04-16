@@ -14,4 +14,4 @@ done
 CUR_DIR=$(dirname "$SELF_PATH")
 CUR_DIR=$(dirname "$CUR_DIR")
 
-"$CUR_DIR"/Frameworks/XUL.framework/Versions/16.0/xulrunner -app "$CUR_DIR"/Resources/application.ini 
+"$CUR_DIR"/Frameworks/XUL.framework/Versions/20.0.1/xulrunner -app "$CUR_DIR"/Resources/application.ini 
