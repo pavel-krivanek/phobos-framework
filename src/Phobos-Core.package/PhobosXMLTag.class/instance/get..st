@@ -5,7 +5,7 @@ get: aPropertyName
 
 	self assert: self id notNil.
 	
-	result := WAContinuation currentDo: [:cc |
+	result := Continuation currentDo: [:cc |
 		| cid newMessage |
 		cid := PhobosCurrentSession value registerClosure: [:res | cc value: res].
 		newMessage := PhobosMessage new.
