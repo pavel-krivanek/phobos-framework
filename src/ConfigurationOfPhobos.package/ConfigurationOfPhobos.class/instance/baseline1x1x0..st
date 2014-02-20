@@ -1,40 +1,24 @@
 baselines
-baseline1x0x0: spec
+baseline1x1x0: spec
   
-	<version: '1.0.0-baseline'>
+	<version: '1.1.0-baseline'>
 	
-	| seasideRepository |
-	
-	seasideRepository := 'http://www.squeaksource.com/Seaside30'.
-
-	spec for: #pharo do: [
+	spec for: #'pharo3.0.x' do: [
 		spec 
 			blessing: #baseline;
 			repository: 'http://smalltalkhub.com/mc/PavelKrivanek/Phobos/main'.
 			
-		spec
+			spec
 			project: 'ZincHTTPComponents' with: [
 				spec repository: 'http://mc.stfx.eu/ZincHTTPComponents'.
 				spec className: 'ConfigurationOfZincHTTPComponents'.
 				spec file: 'ConfigurationOfZincHTTPComponents'.
-				spec loads: #('Zinc-HTTP' 'Zinc-FileSystem' 'Zinc-Tests' 'Zinc-WebSocket-Core')].
+				spec loads: #('Zinc-WebSocket-Core')].
 					
-		spec project: 'Grease' with: [
-			spec repository: seasideRepository.
-			spec className: 'ConfigurationOfGrease'.
-			spec file: 'ConfigurationOfGrease'.
-			spec loads: #('Grease-Core' 'Grease-Pharo-Core' )].
-
-		spec project: 'Seaside-Continuation' with: [
-			spec repository: seasideRepository.
-			spec className: 'ConfigurationOfSeaside30'.
-			spec file: 'ConfigurationOfSeaside30'.
-			spec loads: #('Seaside-Pharo-Continuation' )].
-
 		spec package: 'JSON' with: [
 			spec repository: 'http://smalltalkhub.com/mc/PharoExtras/SCouchDBViewServer/main'].
 			
-		spec package: 'Phobos-Core' with: [spec requires: #('ZincHTTPComponents' 'Grease' 'Seaside-Continuation' 'JSON') ].
+		spec package: 'Phobos-Core' with: [spec requires: #('ZincHTTPComponents' 'JSON') ].
 		spec package: 'Phobos-XUL' with: [spec requires: #('Phobos-Core') ].
 		spec package: 'Phobos-HTML' with: [spec requires: #('Phobos-Core') ].
 		spec package: 'Phobos-Demo' with: [spec requires: #('Phobos-XUL' 'Phobos-HTML') ].
@@ -43,9 +27,5 @@ baseline1x0x0: spec
 		spec group: 'demo' with: #('Phobos-Core' 'Phobos-XUL' 'Phobos-HTML' 'Phobos-Demo').
 		spec group: 'core' with: #('Phobos-Core' 'Phobos-XUL' 'Phobos-HTML').
 	].
-	
-	spec for: #squeakCommon do: [
-		].
-   
       
         
