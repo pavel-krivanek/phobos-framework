@@ -4,7 +4,7 @@ version1x1x0: spec
 
 	spec for: #'common' do: [
 		spec blessing: #'development'.
-		spec package: 'Phobos-Core' with: 'Phobos-Core-PavelKrivanek.26'. 
+		spec package: 'Phobos-Core' with: 'Phobos-Core-PavelKrivanek.27'. 
 		spec package: 'Phobos-XUL' with: 'Phobos-XUL-PavelKrivanek.12'. 
 		spec package: 'Phobos-HTML' with: 'Phobos-HTML-PavelKrivanek.2'. 
 		spec package: 'Phobos-Demo' with: 'Phobos-Demo-PavelKrivanek.27'. 
