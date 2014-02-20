@@ -2,7 +2,7 @@ as yet unclassified
 evaluateJS: aScript
 
 	| result |
-	result := WAContinuation currentDo: [:cc |
+	result := Continuation currentDo: [:cc |
 		| cid newMessage |
 		cid := self registerClosure: [:res | cc value: res].
 		newMessage := PhobosMessage new.

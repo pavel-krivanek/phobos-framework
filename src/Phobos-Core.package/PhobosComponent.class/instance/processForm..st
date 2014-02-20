@@ -3,8 +3,8 @@ processForm: aForm
 	
 	| msg |
 	
-	WAContinuation currentDo: [:cc |
-		| cid newMessage |
+	Continuation currentDo: [:cc |
+		| cid |
 		cid := self registerClosure: [:res | cc value: res].
 		msg := PhobosMessage new.
 		msg type: #processForm.

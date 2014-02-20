@@ -1,9 +1,9 @@
 accessing
 openInNewWindow
 
-	| winId component msg renderer |
+	| winId msg renderer |
 
-	winId := WAContinuation currentDo: [:cc |
+	winId := Continuation currentDo: [:cc |
 		| cid newMessage |
 		cid := self session registerClosure: [:res | cc value: res].
 		newMessage := PhobosMessage new.
