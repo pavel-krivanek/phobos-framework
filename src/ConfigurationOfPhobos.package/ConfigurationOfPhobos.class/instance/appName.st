@@ -1,0 +1,4 @@
+postload
+appName
+
+	^ 'PhobosDemo'.
