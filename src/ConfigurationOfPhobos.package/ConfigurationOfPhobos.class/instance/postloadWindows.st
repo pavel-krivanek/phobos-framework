@@ -14,11 +14,16 @@ postloadWindows
 		readFrom: contents readStream;
 		extractAllTo: FileSystem disk workingDirectory.
 		
-	UIManager default informUser: 'Downloading XULRunner. Please wait, this progress bar is not showing real progress ;-)' during: [  
-		ZnClient new
-			url: 'http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/27.0/runtimes/xulrunner-27.0.en-US.win32.zip';
-			downloadTo: 'xulrunner.zip'.
-	].	
+	UIManager default informUserDuring: [ :bar |
+ 		 [ ZnClient new
+      			url: 'http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/27.0/runtimes/xulrunner-27.0.en-US.win32.zip';
+      			signalProgress: true;
+      			downloadTo: 'xulrunner.zip' ]
+        		on: HTTPProgress
+        		do: [ :progress |
+                		bar label: progress printString.
+                		progress isEmpty ifFalse: [ bar current: progress percentage ].
+                		progress resume ] ].
 	ZipArchive new 
 		readFrom:  FileSystem disk workingDirectory / 'xulrunner.zip';
 		extractAllTo: FileSystem disk workingDirectory.

@@ -1,6 +1,10 @@
 postload
 postload1x1x0: loader package: packageSpec
 
-	(Smalltalk os isUnix and: [Smalltalk isHeadless not]) ifTrue: [ self postloadUnix ].
-	
-	(Smalltalk os isWindows and: [Smalltalk isHeadless not]) ifTrue: [ self postloadWindows ]
+	Smalltalk isHeadless ifFalse: [ 
+		(UIManager confirm: 'Do you want to start PhobosDemo application?')
+			ifTrue: [
+					Smalltalk os isUnix ifTrue: [ self postloadUnix ].
+					Smalltalk os isWindows ifTrue: [ self postloadWindows ].
+					Smalltalk os isMacOSX ifTrue: [ self postloadMacOS ] ] ].
+
