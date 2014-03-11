@@ -1,5 +1,5 @@
 as yet unclassified
 mainClass
 
-	^ PhobosDemo
+	^ PhobosHelloWorldMain
 	"	^ PhobosHelloWorldMain "
