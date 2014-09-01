@@ -31,57 +31,57 @@ phobos.createNodesFromData = function(obj)
   var textNode;
   var ns = obj.namespace;
   if (ns == "XUL_NS") ns = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
-  if (ns == "HTML_NS") ns = "http://www.w3.org/1999/xhtml";
-  if (ns == "SVG_NS") ns = "http://www.w3.org/2000/svg";
-
-  if (obj.tagName == "TEXTNODE") {
-    textNode = document.createTextNode(obj.attributes[0].value);
-    return [textNode]
-  }
-  
-  if (obj.tagName == "RAWXMLNODE") {
-    return [phobos.parseXML(obj.attributes[0].value).documentElement]
-  }  
-  
-  var node = document.createElementNS(ns, obj.prefix + obj.tagName);
-  for (var a = 0; a < obj.attributes.length; a++) {
-    var attr = obj.attributes[a];
-    node.setAttribute(attr.key, attr.value)
-  }
-   
-  for (var p = 0; p < obj.properties.length; p++) {
-    var prop = obj.properties[p];
-
-    var splitted = prop.value.split('.');
-    var result = window;
-    splitted.forEach(function (each) {
-      result = result[each]
-    })  
-    node[prop.key] = result;
- 
-  }  
-  
-  //node["__phobos_properties"] = obj.properties;
-  
-  
-  if (obj.children) {
-    for (var i = 0; i < obj.children.length; i++)
-    {
-      var children; 
-      /* if (typeof obj.children[i] == 'string' || obj.children[i] == undefined)
-        child = document.createTextNode( obj.children[i] || '');
-      else*/
-      children = phobos.createNodesFromData( obj.children[i])
-      for (var n = 0; n < children.length; n++) {
-          children[n].parent = node;
-          node.appendChild(children[n]);
+    if (ns == "HTML_NS") ns = "http://www.w3.org/1999/xhtml";
+      if (ns == "SVG_NS") ns = "http://www.w3.org/2000/svg";
+        
+        if (obj.tagName == "TEXTNODE") {
+          textNode = document.createTextNode(obj.attributes[0].value);
+          return [textNode]
         }
         
-      //child.parent = node;
-      //node.appendChild(child);
-    }; 
-  };
-  return [node];
+        if (obj.tagName == "RAWXMLNODE") {
+          return [phobos.parseXML(obj.attributes[0].value).documentElement]
+        }  
+        
+        var node = document.createElementNS(ns, obj.prefix + obj.tagName);
+        for (var a = 0; a < obj.attributes.length; a++) {
+          var attr = obj.attributes[a];
+          node.setAttribute(attr.key, attr.value)
+        }
+        
+        for (var p = 0; p < obj.properties.length; p++) {
+          var prop = obj.properties[p];
+          
+          var splitted = prop.value.split('.');
+          var result = window;
+          splitted.forEach(function (each) {
+            result = result[each]
+          })  
+          node[prop.key] = result;
+          
+        }  
+        
+        //node["__phobos_properties"] = obj.properties;
+        
+        
+        if (obj.children) {
+          for (var i = 0; i < obj.children.length; i++)
+          {
+            var children; 
+            /* if (typeof obj.children[i] == 'string' || obj.children[i] == undefined)
+             *        child = document.createTextNode( obj.children[i] || '');
+             *      else*/
+            children = phobos.createNodesFromData( obj.children[i])
+            for (var n = 0; n < children.length; n++) {
+              children[n].parent = node;
+              node.appendChild(children[n]);
+            }
+            
+            //child.parent = node;
+            //node.appendChild(child);
+          }; 
+        };
+        return [node];
 }
 
 phobos.createNodes = function(jsonString)
@@ -197,7 +197,7 @@ phobos.Session.prototype.onClose = function(evt)
 
 phobos.Session.prototype.processMessage = function(aMessage)
 {
-//  xuljet.inspect(aMessage);
+  //  xuljet.inspect(aMessage);
   switch (aMessage.type) {
     case "replaceComponentInDocument": 
       xuljet.replaceComponentInDocument(this.getWindow(aMessage.window).document, aMessage.target, phobos.createNodes(aMessage.content)); 
@@ -350,26 +350,26 @@ phobos.Session.prototype.processForm = function(windowId, formId, continuation)
         } // else continue as with radiogroup!
       case 'radiogroup': 
         if (node.getAttribute('phobos:formitem')) {
-            if (node.selectedItem)
-            {
-              var index = node.selectedItem.getAttribute('phobos:value');
-              val = parseInt(index, 10);
-            } else
-              val = node.value;
+          if (node.selectedItem)
+          {
+            var index = node.selectedItem.getAttribute('phobos:value');
+            val = parseInt(index, 10);
+          } else
+            val = node.value;
         }  
         break;
       case 'listbox': 
       case 'richlistbox': 
         if (callback) {
-    
+          
           var selectedCount = node.selectedCount;
-            val = [];
-            for (var a=0; a<selectedCount; a++)
-            {
-              var index = node.getSelectedItem(a).getAttribute('phobos:value');
-              val.push(parseInt(index, 10))
-            }
-
+          val = [];
+          for (var a=0; a<selectedCount; a++)
+          {
+            var index = node.getSelectedItem(a).getAttribute('phobos:value');
+            val.push(parseInt(index, 10))
+          }
+          
         }
         break;
       default: 
@@ -381,14 +381,14 @@ phobos.Session.prototype.processForm = function(windowId, formId, continuation)
         callback: callback,
         value: val
       })}
- 
+      
   })
     
-   var msg = phobos.globals.currentSession.newMessage();
-   msg.type = "passValues";
-   msg.target = continuation;
-   msg.argument = result;
-   msg.send();   
+    var msg = phobos.globals.currentSession.newMessage();
+    msg.type = "passValues";
+    msg.target = continuation;
+    msg.argument = result;
+    msg.send();   
 }
 
 phobos.Session.prototype.openWindow = function(parentWindowId, continuation)
@@ -422,7 +422,7 @@ phobos.Session.prototype.newMessage = function()
 
 phobos.Session.prototype.onSocketError = function(evt)
 {
-//  xuljet.inspect(evt) 
+  //  xuljet.inspect(evt) 
 }
 
 phobos.Session.prototype.executeJS = function(script, continuation)
@@ -442,7 +442,7 @@ phobos.Session.prototype.getProperty = function(windowId, elementId, propertyNam
   splitted.forEach(function (each) {
     result = result[each]
   })  
-   
+  
   var msg = phobos.globals.currentSession.newMessage();
   msg.type = "returnValue";
   msg.content = JSON.stringify(result);
@@ -513,27 +513,89 @@ phobos.integerInputOnKeyPress = function(elm, event)
     
     elm.setSelectionRange(selStart+1, selStart+1);
   } 
-
+  
   var maxLength = parseInt(elm.getAttribute('phobos:maxlength'), 10)
   
   if ((newValue.length == maxLength) || ((newValue.length == maxLength) && shouldMove)) {
     document.commandDispatcher.advanceFocus();
   }
-     
+  
   event.preventDefault();
-     
+  
   var evt = document.createEvent('HTMLEvents');
   evt.initEvent('change', false, false ); // event type,bubbling,cancelable
   elm.dispatchEvent(evt);
- 
+  
   return false;
+}
+
+
+phobos.copyProperties = function(anObject, properiesNames) 
+{
+  var result = {};
+  properiesNames.forEach(function (each) {
+    result[each] = anObject[each]
+  }); 
+  return result
+  
+}
+
+
+phobos.extractNsIFile = function(file) 
+{
+  return phobos.copyProperties(file, [
+  "diskSpaceAvailable",
+  "fileSize",
+  "fileSizeOfLink",
+  "followLinks",
+  "lastModifiedTime",
+  "lastModifiedTimeOfLink",
+  "leafName",
+  "permissions",
+  "permissionsOfLink",
+  "persistentDescriptor",
+  "path"
+  ])
+}
+
+
+phobos.openFileDialog = function(title, mode, filterMask, filters) {
+  /* See:
+   *   http://developer.mozilla.org/en/docs/XUL_Tutorial:Open_and_Save_Dialogs 
+   *   
+   *   https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFilePicker
+   *   
+   *   mode: modeOpen, modeGetFolder, modeSave
+   */
+  
+  var result = {};
+  
+  var nsIFilePicker = Components.interfaces.nsIFilePicker;
+  var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+  
+  fp.init(window, title, nsIFilePicker[mode]);
+  fp.appendFilters(filterMask);
+  
+  for (var i=0; i<filters.length; i = i + 2){
+    fp.appendFilter(filters[i], filters[i+1]);
+  }; 
+  
+  var res = fp.show();
+  if (res != nsIFilePicker.returnCancel) {
+    result = phobos.extractNsIFile(fp.file);
+  }
+  
+  result.dialogResult = res;
+  
+  return JSON.stringify(result);
+  
 }
 
 
 function startSession()
 {
   var session = new phobos.Session();
- 
+  
   phobos.globals.currentSession = session;
 }
 
