@@ -1,2 +1,2 @@
 SystemOrganization addCategory: #'Phobos-Demo'!
-SystemOrganization addCategory: #'Phobos-Demo-Support'!
+SystemOrganization addCategory: 'Phobos-Demo-Support'!
