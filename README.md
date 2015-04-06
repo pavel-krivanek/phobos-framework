@@ -22,7 +22,7 @@ MIT license
 ## Screenshots
 Linux
 Mac OS X
-Windows
+[Windows](http://imgur.com/a/HFzuE)
 Download
 http://code.google.com/p/phobos-framework/downloads/list
 Jenkins development builds
