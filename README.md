@@ -31,4 +31,4 @@ http://code.google.com/p/phobos-framework/downloads/list
 Jenkins development builds
 
 ## FAQ
-- [https://github.com/pavel-krivanek/phobos-framework/wiki/Frequently-asked-questions.](see here)
+- [https://github.com/pavel-krivanek/phobos-framework/wiki/Frequently-asked-questions](see here)
