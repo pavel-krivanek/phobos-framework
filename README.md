@@ -20,10 +20,11 @@ CommonJS module system
 MIT license
 
 ## Screenshots
-Linux
-Mac OS X
-[Windows](http://imgur.com/a/HFzuE)
-Download
+- Linux
+- [Mac OS X](http://imgur.com/a/6nhE2)
+- [Windows](http://imgur.com/a/HFzuE)
+
+## Download
 http://code.google.com/p/phobos-framework/downloads/list
 Jenkins development builds
 
