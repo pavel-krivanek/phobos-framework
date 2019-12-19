@@ -1,7 +1,7 @@
 as yet unclassified
 sectionStart: id 
 
-	self HTML span  
+	self span  
 		hidden: true;
 		id: '__start_', id asString.
 		

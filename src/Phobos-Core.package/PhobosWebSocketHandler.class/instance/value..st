@@ -3,7 +3,7 @@ value: webSocket
 	
 	[
 		| session |
-		session := self application sessionClass new.
+		session := PhobosSession new."self application sessionClass new."
 		session application: self application.
 		session webSocket: webSocket.
 		sessions add: session.

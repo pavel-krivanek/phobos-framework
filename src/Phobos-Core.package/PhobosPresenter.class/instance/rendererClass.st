@@ -1,4 +1,4 @@
 as yet unclassified
 rendererClass
 
-	^ PhobosXULCanvas 
+	^ PhobosHTMLCanvas 

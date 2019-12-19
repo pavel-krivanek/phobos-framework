@@ -2,8 +2,8 @@ as yet unclassified
 renderContentOn: xul
 
 	xul button 
-		label: 'Say Hello';
-		oncommand:  [
+		onClick:  [
 			| result |
 			result := self evaluateJS: '3+4'.
-			self evaluateJS: ('alert("', result asString, '")')].
+			self evaluateJS: ('alert("', result asString, '")')];
+		with: 'Say Hello'.
