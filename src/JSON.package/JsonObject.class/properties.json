@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Dictionary",
+	"category" : "JSON",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "JsonObject",
+	"type" : "normal"
+}

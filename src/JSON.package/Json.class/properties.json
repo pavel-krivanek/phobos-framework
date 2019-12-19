@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "JSON",
+	"classinstvars" : [
+		"escapeArray"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stream",
+		"ctorMap"
+	],
+	"name" : "Json",
+	"type" : "normal"
+}
