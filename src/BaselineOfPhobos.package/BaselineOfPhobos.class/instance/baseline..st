@@ -6,12 +6,11 @@ baseline: spec
 		
 	spec 
 		baseline: 'Glorp' 
-		with: [ spec repository: 'github://pavel-krivanek/glorp:8.3.1-23-baseline' ];
-	   onConflict: [ :e | e useIncoming ];
+		with: [ spec repository: 'github://pavel-krivanek/glorp:8.3.1-23-baseline';
+		onConflict: [ :e | e useIncoming ];
       ignoreImage;
-		loads: 'Zinc-WebSocket-Core'.
-
-
+		loads: 'Zinc-WebSocket-Core' ].
+	
 		spec 
 			package: 'JSON';			
 			package: 'Phobos-Core';
