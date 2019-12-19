@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "pk 12/19/2019 20:39",
+	"super" : "BaselineOf",
+	"category" : "BaselineOfPhobos",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BaselineOfPhobos",
+	"type" : "normal"
+}
