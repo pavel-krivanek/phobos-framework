@@ -6,4 +6,4 @@ baseline: spec
 		spec 
 			package: 'Phobos-Core';
 			package: 'Phobos-XUL';
-			package: 'Phobos-HMTL' ]
+			package: 'Phobos-HTML' ]
