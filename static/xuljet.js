@@ -456,7 +456,7 @@ exports.HTMLCanvas = function(parentCanvas, aComponent)
 }
 exports.inherits(exports.HTMLCanvas, exports.AbstractCanvas);
 
-exports.HTMLCanvas.prototype.tags = ['abbr', 'acronym', 'address', 'applet', 'area', 'article', 'aside', 'audio', 
+exports.HTMLCanvas.prototype.tags = ['a', 'abbr', 'acronym', 'address', 'applet', 'area', 'article', 'aside', 'audio', 
     'b', 'base', 'basefont', 'bdo', 'big', 'blockquote', 'body', 'br', 'button', 
     'canvas', 'caption', 'center', 'cite', 'code', 'col', 'colgroup', 'command', 
     'datalist', 'dd', 'del', 'details', 'dfn', 'dir', 'div', 'dl', 'dt', 

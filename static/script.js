@@ -220,6 +220,7 @@ phobos.Session.prototype.onClose = function(evt)
 phobos.Session.prototype.processMessage = function(aMessage)
 {
   //  xuljet.inspect(aMessage);
+  console.log(aMessage);
   switch (aMessage.type) {
     case "replaceComponentInDocument": 
       xuljet.replaceComponentInDocument(this.getWindow(aMessage.window).document, aMessage.target, phobos.createNodes(aMessage.content)); 
@@ -459,6 +460,7 @@ phobos.Session.prototype.executeJS = function(script, continuation)
 
 phobos.Session.prototype.getProperty = function(windowId, elementId, propertyName, continuation)
 {
+  debugger;
   var splitted = propertyName.split('.');
   var result = this.getWindow(windowId).document.getElementById(elementId);
   splitted.forEach(function (each) {
