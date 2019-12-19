@@ -5,10 +5,8 @@ baseline: spec
 	spec for: #common do: [
 		
 	spec 
-		baseline: 'Glorp' 
-		with: [ spec repository: 'github://pavel-krivanek/glorp:8.3.1-23-baseline';
-		onConflict: [ :e | e useIncoming ];
-      ignoreImage;
+		baseline: 'ZincHTTPComponents' 
+		with: [ spec repository: 'github://svenvc/zinc/repository';
 		loads: 'Zinc-WebSocket-Core' ].
 	
 		spec 
