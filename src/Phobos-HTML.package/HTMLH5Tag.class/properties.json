@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "HTMLTag",
+	"category" : "Phobos-HTML",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "HTMLH5Tag",
+	"type" : "normal"
+}

@@ -12,7 +12,7 @@ startOnZinc
 	self  stop.
 	server := ZnServer startOn: 8888.
 	handler := PhobosWebSocketHandler new.
-	handler application: PhobosAppHelloWorld new.
+	handler application: self.
 
 	server logToTranscript.
 		

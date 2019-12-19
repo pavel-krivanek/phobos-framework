@@ -1,9 +1,34 @@
 as yet unclassified
-renderContentOn: xul
+renderContentOn: html
 
-	xul button 
+
+	html h1 with: 'Phobos Hello World Demo '.
+	html h2 with: 'Count: ', count asString.
+
+	html div with: [
+		html button 
+			onClick:  [ 
+				count := count + 1.
+				self refresh ];
+			with: '+'.
+		html button 
+			onClick:  [ 
+				count := count - 1.
+				self refresh ];
+			with: '+' ].		
+		
+	html div with: [
+		html button 
+			onClick:  [
+				self evaluateJS: ('Hello World)')];
+			with: 'Say Hello'. ].
+		
+	html button 
 		onClick:  [
 			| result |
-			result := self evaluateJS: '3+4'.
+			result := self evaluateJS: 'window.innerWidth'.
 			self evaluateJS: ('alert("', result asString, '")')];
-		with: 'Say Hello'.
+		with: 'Get window width'.
+
+
+		
