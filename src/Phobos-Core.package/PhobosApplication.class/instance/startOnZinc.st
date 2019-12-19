@@ -30,7 +30,7 @@ startOnZinc
 	
 	server delegate
 		map: 'script.js' 
-		to:  [ :request | ZnResponse ok: (ZnEntity html: ((location / 'static/script.js') asFileReference readStream upToEnd)) ].				
+		to:  [ :request | ZnResponse ok: (ZnEntity html: ((location / 'script.js') asFileReference readStream upToEnd)) ].				
 
 	server delegate
 		map: 'xuljet.js' 
