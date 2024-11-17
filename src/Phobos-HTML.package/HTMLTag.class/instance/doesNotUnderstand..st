@@ -9,7 +9,7 @@ doesNotUnderstand: aMessage
 			key := key allButLast asSymbol.
 			arg := aMessage arguments first.
 			self attributesAt: key put: arg.
-			^ arg].
+			^ self "arg"].
 	^ super doesNotUnderstand: aMessage
 				
 	

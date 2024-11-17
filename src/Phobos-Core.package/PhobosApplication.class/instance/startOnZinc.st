@@ -30,9 +30,17 @@ startOnZinc
 	
 	server delegate
 		map: 'script.js' 
-		to:  [ :request | ZnResponse ok: (ZnEntity html: ((location / 'script.js') asFileReference readStream upToEnd)) ].				
+		to:  [ :request | ZnResponse ok: (ZnEntity javascript: ((location / 'script.js') asFileReference readStream upToEnd)) ].				
 
 	server delegate
 		map: 'xuljet.js' 
-		to:  [ :request | ZnResponse ok: (ZnEntity html: ((location / 'xuljet.js') asFileReference readStream upToEnd)) ].				
+		to:  [ :request | ZnResponse ok: (ZnEntity javascript: ((location / 'xuljet.js') asFileReference readStream upToEnd)) ].				
 		
+	server delegate
+		map: 'winbox.min.js' 
+		to:  [ :request | ZnResponse ok: (ZnEntity javascript: ((location / 'winbox.min.js') asFileReference readStream upToEnd)) ].				
+
+	server delegate
+		map: 'winbox.min.css' 
+		to:  [ :request | ZnResponse ok: (ZnEntity css: ((location / 'winbox.min.css') asFileReference readStream upToEnd)) ].				
+	

@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'Phobos-Core'!
+self packageOrganizer ensurePackage: #'Phobos-Core' withTags: #()!

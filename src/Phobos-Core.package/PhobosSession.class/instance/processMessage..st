@@ -11,7 +11,7 @@ processMessage: message
 		self language: (msg argument at: #language).
 		self baseURI: (msg argument at: #baseURI).
 		self registerWindow: #mainWindow.
-		component := self getMain: #mainWindow.
+		component := self getMain: nil.
 		xul := component rendered.
 		newMessage := PhobosMessage new.
 		newMessage type: #replaceComponentInDocument.

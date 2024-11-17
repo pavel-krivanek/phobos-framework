@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'Phobos-HTML'!
+self packageOrganizer ensurePackage: #'Phobos-HTML' withTags: #()!

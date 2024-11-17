@@ -1,4 +1,4 @@
 accessing
 getMain: aWindow
 
-	^ self application mainClass on: aWindow.
+	^ self application mainComponentOn: aWindow
