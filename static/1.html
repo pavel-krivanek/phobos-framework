@@ -5,6 +5,14 @@
     <title>title</title>
     <script src="xuljet.js"></script>
     <script src="script.js"></script>
+    <script src="winbox.min.js"></script>
+    <link rel="stylesheet" href="winbox.min.css">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      new WinBox("Spec-Web Test", { mount: document.getElementById("mainWindow") });
+    });
+  </script>
   </head>
   <body onload="startSession();">
     <div id="mainWindow">
