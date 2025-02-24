@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #BaselineOfPhobos!
+self packageOrganizer ensurePackage: #BaselineOfPhobos withTags: #()!

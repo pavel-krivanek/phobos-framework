@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "ConnectionClosed",
+	"category" : "Zinc-WebSocket-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"code",
+		"reason"
+	],
+	"name" : "ZnWebSocketClosed",
+	"type" : "normal"
+}

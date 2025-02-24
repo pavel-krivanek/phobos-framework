@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Zinc-WebSocket-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"opcode",
+		"final",
+		"masked",
+		"body"
+	],
+	"name" : "ZnWebSocketFrame",
+	"type" : "normal"
+}

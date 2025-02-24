@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "SvenVanCaekenberghe 6/16/2014 13:24",
+	"super" : "ZnWebSocketLogEvent",
+	"category" : "Zinc-WebSocket-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"subject"
+	],
+	"name" : "ZnWebSocketGenericLogEvent",
+	"type" : "normal"
+}

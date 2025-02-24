@@ -4,12 +4,13 @@ baseline: spec
 
 	spec for: #common do: [
 		
-	spec 
+"	spec 
 		baseline: 'ZincHTTPComponents' 
 		with: [ spec repository: 'github://svenvc/zinc/repository';
 		loads: 'Zinc-WebSocket-Core' ].
-	
+"	
 		spec 
+			package: 'Zinc-WebSocket-Core';			
 			package: 'JSON';			
 			package: 'Phobos-Core';
 			package: 'Phobos-XUL';
